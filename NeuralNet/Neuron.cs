@@ -20,9 +20,10 @@ namespace NeuralNet
             weights = new double[numInputs];
             weightGradients = new double[numInputs];
             previousWG = new double[numInputs];
-            weights.ToList().ForEach(w => w = Network.r.NextDouble());
+            for (int weightIdx = 0; weightIdx < weights.Length; weightIdx++)
+                weights[weightIdx] = Network.r.NextDouble();
 
-            bias = Network.r.NextDouble();
+            bias = 0;
             biasGradient = 0;
             previousBG = 0;
         }
@@ -67,7 +68,8 @@ namespace NeuralNet
 
             //reset neuron and weight and bias GRADIENTS after each update (update every batch)
             neuronGradient = 0;
-            weightGradients.ToList().ForEach(wg => wg = 0);
+            for (int wgIdx = 0; wgIdx < weightGradients.Length; wgIdx++)
+                weightGradients[wgIdx] = 0;
             biasGradient = 0;
         }
     }

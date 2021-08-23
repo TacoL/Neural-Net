@@ -20,7 +20,7 @@ namespace NeuralNet
 
             //set up the network
             Network.learningRate = 0.1;
-            Network.momentumScalar = 0;
+            Network.momentumScalar = 0.001;
             Network.batchSize = 4;
             Network nn = new Network(new int[] { 2, 2, 1 });
 
