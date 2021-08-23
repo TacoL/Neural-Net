@@ -8,8 +8,8 @@ namespace NeuralNet
 {
     public class Neuron
     {
-        public double neuronValue, activationValue, bias, neuronGradient, biasGradient;
-        public double[] weights, weightGradients;
+        public double neuronValue, activationValue, bias, neuronGradient, biasGradient, previousBG;
+        public double[] weights, weightGradients, previousWG;
 
         public Neuron(int numInputs)
         {
@@ -19,9 +19,12 @@ namespace NeuralNet
 
             weights = new double[numInputs];
             weightGradients = new double[numInputs];
+            previousWG = new double[numInputs];
             weights.ToList().ForEach(w => w = Network.r.NextDouble());
+
             bias = Network.r.NextDouble();
             biasGradient = 0;
+            previousBG = 0;
         }
 
         public void calcActivationValue(List<Neuron> inputNeurons)
@@ -54,8 +57,14 @@ namespace NeuralNet
         {
             //update weights and biases
             for (int weightIdx = 0; weightIdx < weights.Length; weightIdx++)
-                weights[weightIdx] -= (weightGradients[weightIdx] / Network.batchSize) * Network.learningRate;
-            bias -= biasGradient / Network.batchSize;
+            {
+                weights[weightIdx] -= (weightGradients[weightIdx] / Network.batchSize * Network.learningRate) + (previousWG[weightIdx] * Network.momentumScalar);
+                previousWG[weightIdx] = weightGradients[weightIdx] / Network.batchSize;
+            }
+                
+            bias -= (biasGradient / Network.batchSize * Network.learningRate) + (previousBG * Network.momentumScalar);
+            previousBG = biasGradient / Network.batchSize;
+
             //reset neuron and weight and bias GRADIENTS after each update (update every batch)
             neuronGradient = 0;
             weightGradients.ToList().ForEach(wg => wg = 0);

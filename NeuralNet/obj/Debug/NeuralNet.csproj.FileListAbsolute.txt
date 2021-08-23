@@ -7,3 +7,12 @@ C:\Users\tahva\source\repos\NeuralNet\NeuralNet\obj\Debug\NeuralNet.csproj.Gener
 C:\Users\tahva\source\repos\NeuralNet\NeuralNet\obj\Debug\NeuralNet.csproj.CoreCompileInputs.cache
 C:\Users\tahva\source\repos\NeuralNet\NeuralNet\obj\Debug\NeuralNet.exe
 C:\Users\tahva\source\repos\NeuralNet\NeuralNet\obj\Debug\NeuralNet.pdb
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\bin\Debug\NeuralNet.exe.config
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\bin\Debug\NeuralNet.exe
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\bin\Debug\NeuralNet.pdb
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\obj\Debug\NeuralNet.csprojAssemblyReference.cache
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\obj\Debug\NeuralNet.Properties.Resources.resources
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\obj\Debug\NeuralNet.csproj.GenerateResource.cache
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\obj\Debug\NeuralNet.csproj.CoreCompileInputs.cache
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\obj\Debug\NeuralNet.exe
+C:\Users\tahva\OneDrive\Documents\GitHub\Neural-Net\NeuralNet\obj\Debug\NeuralNet.pdb

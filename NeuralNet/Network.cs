@@ -10,6 +10,7 @@ namespace NeuralNet
     {
         public static Random r = new Random();
         public static double learningRate;
+        public static double momentumScalar;
         public static int batchSize;
 
         List<List<Neuron>> layers = new List<List<Neuron>>();
